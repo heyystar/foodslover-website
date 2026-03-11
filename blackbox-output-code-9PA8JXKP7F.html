@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai, Kahaani & Kebab | Unique Food Experience</title>
+    <style>
+        /* CSS Styling - Design */
+        :root {
+            --primary: #ff6b6b;
+            --dark: #1a1a1a;
+            --light: #f4f4f4;
+            --gold: #ffd700;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark);
+            color: var(--light);
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+        }
+
+        p.subtitle {
+            font-size: 1.5rem;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .cta-btn {
+            margin-top: 30px;
+            padding: 15px 40px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            transition: 0.3s;
+            border: 2px solid var(--primary);
+        }
+
+        .cta-btn:hover {
+            background-color: transparent;
+            color: var(--primary);
+        }
+
+        /* Mood Selector Section */
+        .mood-section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #252525;
+        }
+
+        .mood-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .mood-btn {
+            padding: 15px 30px;
+            border: 1px solid var(--light);
+            background: transparent;
+            color: var(--light);
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .mood-btn:hover {
+            background-color: var(--gold);
+            color: var(--dark);
+            transform: scale(1.1);
+        }
+
+        /* Food Gallery Grid */
+        .gallery {
+            padding: 50px 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: #2a2a2a;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+
+        .story {
+            font-size: 0.9rem;
+            color: #ccc;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-weight: bold;
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: black;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            color: #777;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header / Hero Section -->
+    <header>
+        <h1>Chai, Kahaani & Kebab</h1>
+        <p class="subtitle">Yeh sirf khana nahi, ehsaas hai. <br> Apne mood ke hisaab se Chai aur Desi Khana dhoondhein.</p>
+        <a href="#explore" class="cta-btn">Start Your Journey</a>
+    </header>
+
+    <!-- Mood Selector -->
+    <section class="mood-section" id="explore">
+        <h2>How are you feeling today?</h2>
+        <p>Select a mood to find your perfect meal.</p>
+        <div class="mood-buttons">
+            <button class="mood-btn">🔥 Spicy & Excited</button>
+            <button class="mood-btn">☕ Calm & Nostalgic</button>
+            <button class="mood-btn">🍔 Hungry & Fast</button>
+            <button class="mood-btn">🌙 Late Night Cravings</button>
+        </div>
+    </section>
+
+    <!-- Unique Food Gallery -->
+    <section class="gallery">
+        
+        <!-- Item 1: Chai -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Masala Chai">
+            <div class="card-content">
+                <h3>Dhaba Style Chai</h3>
+                <p class="story">"Jab subah ki thandak ho aur ghar ki yaad aaye..."</p>
+                <p>Ek kullah garam chai jo aapke dil ko garam kare.</p>
+                <span class="price">₹20</span>
+            </div>
+        </div>
+
+        <!-- Item 2: Fast Food -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Biryani">
+            <div class="card-content">
+                <h3>Hyderabadi Dum Biryani</h3>
+                <p class="story">"Rajaon ka khana, ab aapke haath mein."</p>
+                <p>Khushbu aisi ki padosi bhi khidki khol le.</p>
+                <span class="price">₹250</span>
+            </div>
+        </div>
+
+        <!-- Item 3: Street Food -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pani Puri">
+            <div class="card-content">
+                <h3>Street Style Gol Gappa</h3>
+                <p class="story">"Bachpan ki wo yaadein, ek baar phir."</p>
+                <p>Tez paani, bhari puri aur masala.</p>
+                <span class="price">₹40</span>
+            </div>
+        </div>
+
+        <!-- Item 4: Fast Food -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Burger">
+            <div class="card-content">
+                <h3>Desi Vada Pav Burger</h3>
+                <p class="story">"Mumbai ki sadak aur New York ka style."</p>
+                <p>Ek unique fusion jo aapko naya feel dega.</p>
+                <span class="price">₹120</span>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Chai, Kahaani & Kebab. Made with ❤️ for Food Lovers.</p>
+    </footer>
+
+</body>
+</html>
